@@ -1,59 +1,152 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ☕ eSponsor
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**eSponsor** es una plataforma de crowdfunding (financiamiento colectivo) diseñada para conectar a creadores de contenido con sus seguidores. Permite a los usuarios crear un perfil personalizado y recibir donaciones económicas bajo la metáfora de "invitar un café", ofreciendo una alternativa simplificada a plataformas como Patreon o Ko-fi.
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Características Principales
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Landing Page de Conversión:** Página de inicio atractiva y responsiva.
+* **Autenticación Robusta:** Sistema de Login y Registro seguro utilizando **Laravel Breeze**.
+* **Creator Studio (Dashboard):** Panel de administración privado donde el creador puede:
+    * Ver estadísticas de ganancias y seguidores.
+    * Gestionar su foto de perfil y biografía.
+    * Administrar enlaces a redes sociales (CRUD).
+* **Perfil Público Reactivo:** Página pública accesible para cualquier usuario con un muro de donaciones en tiempo real.
+* **Flujo de Donación:** Sistema de pagos simulado que permite elegir montos personalizados y dejar mensajes de apoyo.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Stack Tecnológico
 
-## Learning Laravel
+El proyecto fue desarrollado utilizando una arquitectura moderna basada en **Inertia.js** para construir una *Single Page Application* (SPA) monolítica.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* **Backend:** Laravel 10 (PHP 8.1+)
+* **Frontend:** Vue 3 (Composition API)
+* **Enrutamiento:** Inertia.js (Puente entre Laravel y Vue)
+* **Estilos:** Tailwind CSS
+* **Base de Datos:** MySQL
+* **Componentes UI:** SweetAlert2, Qrcode.vue
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ⚙️ Guía de Instalación y Despliegue
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Sigue estos pasos para ejecutar el proyecto en tu entorno local.
 
-### Premium Partners
+### 1. Prerrequisitos
+Asegúrate de tener instalado en tu equipo:
+* [PHP](https://www.php.net/) >= 8.1
+* [Composer](https://getcomposer.org/)
+* [Node.js](https://nodejs.org/) & NPM
+* Servidor MySQL (XAMPP, Laragon, Docker, etc.)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2. Clonar el Repositorio
+Abre tu terminal y ejecuta:
 
-## Contributing
+```bash
+git clone https://github.com/Gabriel-bot-droid/esponsor-app.git
+cd esponsor-app
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Instalar Dependencias
+Instala las librerías de PHP y los paquetes de Node.js:
 
-## Code of Conduct
+```bash
+composer install
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Crear Base de Datos
+Crea una base de datos vacía en MySQL. Puedes usar **phpMyAdmin**, **MySQL Workbench** o desde la terminal:
 
-## Security Vulnerabilities
+```sql
+CREATE DATABASE esponsor_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Configuración del Entorno (.env)
+Duplica el archivo de configuración de ejemplo:
 
-## License
+```bash
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Abre el archivo `.env` en tu editor de código y configura la conexión a la base de datos:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=esponsor_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+> **Nota:** Ajusta `DB_USERNAME` y `DB_PASSWORD` según tu configuración local de MySQL.
+
+### 6. Generar Clave de Aplicación
+Esto genera la `APP_KEY` necesaria para la seguridad de Laravel:
+
+```bash
+php artisan key:generate
+```
+
+### 7. Migraciones y Storage
+Ejecuta las migraciones para crear las tablas en la base de datos y crea el enlace simbólico para que las imágenes de perfil sean visibles:
+
+```bash
+php artisan migrate
+php artisan storage:link
+```
+
+### 8. Ejecutar el Proyecto
+Para que la aplicación funcione correctamente, necesitas correr dos terminales simultáneamente:
+
+**Terminal 1** (Vite - Compilación de Frontend):
+
+```bash
+npm run dev
+```
+
+**Terminal 2** (Servidor Laravel):
+
+```bash
+php artisan serve
+```
+
+Abre tu navegador en [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+---
+
+## 📖 Uso
+
+1. **Registro:** Crea una cuenta desde `/register`
+2. **Dashboard:** Accede a `/dashboard` para gestionar tu perfil y enlaces
+3. **Perfil Público:** Tu página pública estará disponible en `/{username}`
+
+---
+
+## 🐛 Solución de Problemas
+
+### Error de conexión a la base de datos
+- Verifica que MySQL esté corriendo
+- Confirma que el nombre de la base de datos, usuario y contraseña sean correctos en el `.env`
+
+### Error "Mix manifest not found"
+- Asegúrate de que `npm run dev` esté corriendo en una terminal separada
+
+### Imágenes de perfil no se muestran
+- Ejecuta `php artisan storage:link` para crear el enlace simbólico
+
+---
+
+## 📝 Licencia
+
+Este proyecto es de código abierto y está disponible para fines educativos.
+
+---
+
+## 👤 Autor
+
+**Gabriel**  
+GitHub: [@Gabriel-bot-droid](https://github.com/Gabriel-bot-droid)
